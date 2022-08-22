@@ -1,5 +1,6 @@
 .parceiros {
-    padding-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 120px;
 }
 
 .parceiros h2 {
@@ -21,12 +22,8 @@
 }
 
 .parceiros img {
-    margin: auto; /*so funcoina em display flex ou grid, com esses dois comandos, 
+    margin: auto; /*so funciona em display flex ou grid, com esses dois comandos, 
     conseguiremos alinhasr no centro as imagens*/
-}
-
-.parceiros li:first-child {
-    border-left: none;
 }
 
 /*tirando as bordas à esquerda do primeiro e do quinto item*/
@@ -43,6 +40,10 @@
 @media (max-width: 800px) {
     .parceiros {
         padding-bottom: 60px;
+    }
+    .parceiros li {
+        display: flex;
+        padding: 20px;
     }
     .parceiros h2 {
         margin-bottom: 20px;
