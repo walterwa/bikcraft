@@ -1,0 +1,20 @@
+.termos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.termos h2 {
+    font-weight: 600; /*estamos sobreescrevendo que todo h2 da classe termos,
+    terá uma fonte maior que as das outras páginas*/
+}
+
+/*para todo h2 depois de um p nas classes .termos
+ou seja, só o segundo h2 será com margin de 40px*/
+.termos p + h2 {
+    margin-top: 40px;
+} 
+
+.termos p {
+    max-width: 75ch;
+    padding-bottom: 24px;
+}
