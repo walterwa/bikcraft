@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+/*tirando padding top apenas na pagina seguros, por isso chamamos via id e classe*/
+#seguros .seguros {
+    padding-top: 0px;
+}
+
 .seguros h2 {
     grid-column: 1/-1; /*colocando os itens PRATA e OURO em uma coluna de ponta a ponta*/
 }
@@ -20,6 +25,7 @@
     padding:  32px 32px 32px 60px;
     display: grid;
     grid-template-columns: 1fr auto; /*o texto fica na primeira e o preço na segunda coluna*/
+    border-radius: 4px;
 }
 
 .seguros-item h3 {
