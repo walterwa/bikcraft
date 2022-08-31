@@ -1,0 +1,65 @@
+.perguntas {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.perguntas h2 {
+    margin-bottom: 60px;
+}
+
+/*alando com a lista dl e com a div dentro dela*/
+.perguntas dl > div {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.perguntas dl > div:nth-child(odd) {
+    background-color: var(--cor-1);
+}
+
+.perguntas dt {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /*primeiro, o ícone amarelo
+    cresce o quanto der, a segunda é a pergunta (uma coluna) e por fim,
+    a setinha cresce o quanto der*/
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.perguntas dt::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    background: var(--cor-p1);
+}
+
+.perguntas dt::after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 6px;
+    background: url("../../img/icones/seta-abrir.svg");
+}
+
+/*rotacionando a setinha quando passarmos o mouse*/
+.perguntas dt:hover::after {
+    transform: rotate(180deg);
+}
+
+.perguntas dd {
+    padding-left: 20px;
+    padding-top: 16px;
+    max-width: 80ch;
+}
+
+@media (max-width: 800px) {
+    .perguntas {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .perguntas h2 {
+        margin-bottom: 40px;
+    }
+}

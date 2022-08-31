@@ -33,8 +33,11 @@
 
 /*Bicicletas*/
 @import "./bicicletas/bicicletas-lista.css";
-/*Bicicletas*/
 @import "./bicicletas/bicicletas.css";
+
+
+/*Bicicleta*/
+@import "./bicicleta/bicicleta.css";
 
 /*Termos*/
 @import "./termos/termos.css";
