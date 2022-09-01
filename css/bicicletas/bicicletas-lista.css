@@ -18,6 +18,14 @@
     overflow-x: scroll;
 }
 
+/*falando com as bicicletas que estão abaixo, no container branco
+com uma foto lado a lado*/
+
+#bicicleta .bicicletas-lista ul {
+    padding: 0px 0px 20px 0px; /*20px para baixo*/
+}
+
+
 .bicicletas-lista li {
     flex: 1;
     min-width: 280px;
