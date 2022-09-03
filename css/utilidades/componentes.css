@@ -19,6 +19,8 @@
     max-width: max-content; /*o tamanho máximo é apenas o do botão, não
     o tamanho do container que ele está. Isso impedirá que ele cresça para além
     do seu conteúdo interno*/
+    border: none;
+    cursor: pointer;
 }
 
 .botao:hover {
