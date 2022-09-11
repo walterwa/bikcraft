@@ -7,6 +7,9 @@
 /*Cores*/
 @import "./utilidades/cores.css";
 
+/*Animação*/
+@import "./utilidades/animacao.css";
+
 /*Tipografia*/
 @import "./utilidades/tipografia.css";
 

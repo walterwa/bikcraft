@@ -27,3 +27,48 @@ function ativarProduto(parametro) {
 
 parametros.forEach(ativarProduto);
 
+//perguntas frequentes
+
+const perguntas = document.querySelectorAll('.perguntas button');
+
+function ativarPergunta(event) {
+    const pergunta = event.currentTarget; //puxar qual o elemento estamos clicando
+    const controls = pergunta.getAttribute('aria-controls');
+    const resposta = document.getElementById(controls);
+
+    resposta.classList.toggle('ativa');
+    const ativa = resposta.classList.contains("ativa"); //verificando se resposta já tem a classe 'ativa'
+    console.log(ativa);
+    pergunta.setAttribute('aria-expanded', ativa); //setando o valor true no atributo
+    
+}
+
+function eventosPerguntas(pergunta) {
+    pergunta.addEventListener('click', ativarPergunta);
+}
+
+perguntas.forEach(eventosPerguntas);
+
+// Galeria de Bicicletas
+const galeria = document.querySelectorAll('.bicicleta-imagens img'); //selecionando todas as imagens da galeria
+const galeriaContainer = document.querySelector('.bicicleta-imagens'); //selecionando o container da galeria
+
+function trocarImagem(event) {
+    const img = event.currentTarget;
+    const media = window.matchMedia('(min-width: 1000px)').matches; //verificando se está acima ou abaixo de 1000px;
+    if(media) {
+        galeriaContainer.prepend(img);
+    }   
+}
+
+function eventosGaleria(img) {
+    img.addEventListener('click', trocarImagem);
+}
+
+
+galeria.forEach(eventosGaleria);
+
+//Animação
+if(window.SimpleAnime) { //se existir o plugin chamado no HTML, então o ativamos 
+    new window.SimpleAnime();
+}
